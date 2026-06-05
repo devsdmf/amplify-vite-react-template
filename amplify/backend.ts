@@ -3,8 +3,10 @@ import { auth } from './auth/resource';
 import { data } from './data/resource';
 import { storage } from './storage/resource';
 
-defineBackend({
+const backend = defineBackend({
   auth,
   data,
   storage,
 });
+
+backend.storage.resources.bucket.autoDeleteObjects = false;
