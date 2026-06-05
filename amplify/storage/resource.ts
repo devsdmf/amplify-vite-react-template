@@ -1,5 +1,6 @@
 import { defineStorage } from '@aws-amplify/backend';
 
 export const storage = defineStorage({
-  name: 'amplifyDemoBucket'
+  name: 'amplifyDemoBucket',
+  keepOnDelete: true
 });
